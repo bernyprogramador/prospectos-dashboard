@@ -1,7 +1,8 @@
 import Link from "next/link";
 import { getResumen } from "@/lib/airtable";
 
-export const revalidate = 60;
+export const dynamic = "force-dynamic";
+export const revalidate = 0;
 
 export default async function DashboardPage() {
   let resumen = {

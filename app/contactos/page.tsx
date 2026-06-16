@@ -1,7 +1,8 @@
 import { getContactosConEmpresa, type Contacto } from "@/lib/airtable";
 import StatusBadge from "@/components/StatusBadge";
 
-export const revalidate = 60;
+export const dynamic = "force-dynamic";
+export const revalidate = 0;
 
 const ROW_BORDER: Record<string, string> = {
   "No contactado": "border-l-zinc-500",

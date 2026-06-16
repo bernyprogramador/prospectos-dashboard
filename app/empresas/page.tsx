@@ -1,7 +1,8 @@
 import StatusBadge from "@/components/StatusBadge";
 import { getEmpresas } from "@/lib/airtable";
 
-export const revalidate = 60;
+export const dynamic = "force-dynamic";
+export const revalidate = 0;
 
 const SECTOR_COLOR: Record<string, string> = {
   "Gestoría/Asesoría": "text-minttext",

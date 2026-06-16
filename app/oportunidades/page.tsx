@@ -1,7 +1,8 @@
 import StatusBadge from "@/components/StatusBadge";
 import { getOportunidades } from "@/lib/airtable";
 
-export const revalidate = 60;
+export const dynamic = "force-dynamic";
+export const revalidate = 0;
 
 export default async function OportunidadesPage() {
   const oportunidades = await getOportunidades();
@@ -39,15 +40,4 @@ export default async function OportunidadesPage() {
                 )}
                 {o.proximoPaso && (
                   <div>
-                    <span className="text-muted/70">Próximo paso: </span>
-                    <span className="text-ink">{o.proximoPaso}</span>
-                  </div>
-                )}
-              </dl>
-            </div>
-          ))}
-        </div>
-      )}
-    </div>
-  );
-}
+                    <s
